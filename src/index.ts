@@ -1,7 +1,7 @@
 /*
  * @Author: wch
  * @Date: 2021-11-08 16:23:57
- * @LastEditTime: 2021-11-10 22:43:37
+ * @LastEditTime: 2021-11-11 20:15:24
  * @LastEditors: your name
  * @Description:  ts demo
  * @FilePath: \typeScript\src\index.ts
@@ -10,6 +10,7 @@
 import './dataType';
 import './enum';
 import './interface';
-import './function';
+import './class1';
+import './class2';
 let hello: string = 'Hello typeScript'
 document.querySelectorAll('.app')[0].innerHTML = hello
