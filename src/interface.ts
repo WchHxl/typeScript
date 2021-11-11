@@ -1,7 +1,7 @@
 /*
  * @Author: wch
  * @Date: 2021-11-10 11:41:40
- * @LastEditTime: 2021-11-10 18:57:03
+ * @LastEditTime: 2021-11-10 23:13:13
  * @LastEditors: your name
  * @Description: interface
  * @FilePath: \typeScript\src\interface.ts
@@ -60,12 +60,22 @@ let chars: StringArray = { length: 1 }
 let chars1: StringArray = ['1']
 console.log(chars);
 console.log(chars1);
+// interface
+// let add: (x: number, y: number) => number
 
-interface StringArray1 {
-  [x: string]: string;
-  [y: number]: string;
+// interface Add {
+//   (x: number, y: number): number
+// }
+// 类型别名
+type Add = (x: number, y: number) => number
+let adds: Add = (a, b) => a + b
+interface Lib {
+  (): void;
+  version: string;
+  doSomething(): void;
 }
-let chars2: StringArray1 = {a: '1', b: '1'}
-// let chars3: StringArray1 = {a: 1}
-console.log(chars2);
-// console.log(chars3);
+let lib: Lib = (() => {
+
+}) as Lib
+lib.version = '1.0'
+lib.doSomething = () => { }
