@@ -1,7 +1,7 @@
 /*
  * @Author: wch
  * @Date: 2021-11-08 16:23:57
- * @LastEditTime: 2021-11-11 20:15:24
+ * @LastEditTime: 2021-11-23 14:52:26
  * @LastEditors: your name
  * @Description:  ts demo
  * @FilePath: \typeScript\src\index.ts
@@ -12,5 +12,6 @@ import './enum';
 import './interface';
 import './class1';
 import './class2';
+import './generics';
 let hello: string = 'Hello typeScript'
 document.querySelectorAll('.app')[0].innerHTML = hello

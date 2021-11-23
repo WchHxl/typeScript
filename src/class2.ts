@@ -1,7 +1,7 @@
 /*
  * @Author: wch
  * @Date: 2021-11-11 18:25:38
- * @LastEditTime: 2021-11-16 15:49:46
+ * @LastEditTime: 2021-11-22 16:56:28
  * @LastEditors: your name
  * @Description: class
  * @FilePath: \typeScript\src\class2.ts
@@ -53,7 +53,7 @@ class WorkFlow {
 }
 new WorkFlow().step1().step2() // 方法的链式调用
 
-class MyFlow extends WorkFlow {
+class MyFlow extends WorkFlow { 
   next() {
     return this
   }
