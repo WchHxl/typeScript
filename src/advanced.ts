@@ -1,7 +1,7 @@
 /*
  * @Author: wch
  * @Date: 2021-11-23 17:18:34
- * @LastEditTime: 2021-11-24 18:15:53
+ * @LastEditTime: 2021-11-25 14:46:33
  * @LastEditors: your name
  * @Description: advanced 类型推断
  * @FilePath: \typeScript\src\advanced.ts
@@ -98,3 +98,55 @@ p2d = p3d
 let funR1 = () => ({ name: '张三' })
 let funR2 = () => ({ name: '张三', age: 18 })
 funR1 = funR2
+
+function overload(a: number, b: number): number;
+function overload(a: string, b: string): string;
+function overload(a: any, b: any): any { };
+// 枚举兼容性
+enum Fenum {
+  apple,
+  banana
+}
+enum Cenum {
+  red,
+  yellow
+}
+let fenum: Fenum.apple = 3
+// 不同枚举互不兼容
+// let cenum: Cenum.red = Fenum.apple
+
+
+// 类兼容性  构造函数和静态元素不被比较  拥有私有属性的只能父类和子类兼容
+class A {
+  constructor(a: number, b: number) {
+  }
+  id: number = 1
+  private name: string
+}
+class B {
+  constructor(a: number) {
+  }
+  id: number = 1
+  private name: string
+}
+let aaa = new A(1, 2)
+let bbb = new B(1)
+// aaa = bbb
+// bbb = aaa
+class AChilder extends A {
+  id: number = 1
+}
+let achilder = new AChilder(1, 2)
+achilder = aaa
+
+// 泛型兼容性
+interface empty<T> {
+  id: T
+}
+// 类型参数T被接口成员使用才会影响泛型的兼容性
+// let obj1: empty<number> = {}
+// let obj2: empty<string> = {}
+// obj1 = obj2
+let funEm1 = <T>(x: T): T => { return x }
+let funEm2 = <U>(y: U): U => { return y }
+funEm1 = funEm2
