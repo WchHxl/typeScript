@@ -1,7 +1,7 @@
 /*******
  * @Author: wch
  * @Date: 2021-11-08 18:00:54
- * @LastEditTime: 2021-11-22 18:17:54
+ * @LastEditTime: 2021-12-13 21:46:56
  * @LastEditors: your name
  * @Description: 
  * @FilePath: \typeScript\build\webpack.base.config.js
@@ -11,7 +11,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: {
-        'app': './src/index.ts'
+        'app': './src/demo/index.ts'
     },
     output: {
         filename: '[name].[chunkhash:8].js'
