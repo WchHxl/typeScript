@@ -1,7 +1,7 @@
 /*
  * @Author: wch
  * @Date: 2021-11-23 17:18:34
- * @LastEditTime: 2021-11-25 17:11:22
+ * @LastEditTime: 2021-11-26 14:58:48
  * @LastEditors: your name
  * @Description: 类型保护
  * @FilePath: \typeScript\src\advanced2.ts
@@ -23,8 +23,16 @@ class JAVASCRIPT {
   }
   javaScript: any
 }
-function getLanguage(type: Type) {
+function isJava(lang: JAVA | JAVASCRIPT): lang is JAVA {
+  return (lang as JAVA).helloJava() !== undefined
+}
+function getLanguage(type: Type, x: string | number) {
   let lang = type === Type.Strong ? new JAVA() : new JAVASCRIPT()
+  // if (isJava(lang)) {
+  //   lang.helloJava()
+  // } else {
+  //   lang.helloJavaScript()
+  // }
   // // instanceof
   // if (lang instanceof JAVA) {
   //   lang.helloJava()
@@ -37,8 +45,12 @@ function getLanguage(type: Type) {
   // } else {
   //   lang.helloJavaScript()
   // }
-  // typeof
-
+  // // typeof
+  // if (typeof x === 'string') {
+  //   console.log(x.length);
+  // } else {
+  //   console.log(x.toFixed(2));
+  // }
   return lang
 }
-getLanguage(Type.Strong)
+getLanguage(Type.Strong, 'x')

@@ -1,12 +1,17 @@
 /*
  * @Author: wch
  * @Date: 2021-11-23 17:18:34
- * @LastEditTime: 2021-11-25 14:46:33
+ * @LastEditTime: 2021-12-22 11:48:57
  * @LastEditors: your name
  * @Description: advanced 类型推断
  * @FilePath: \typeScript\src\advanced.ts
  * 可以输入预定的版权声明、个性签名、空行等
  */
+import "./advanced2";
+import "./advanced3";
+import "./advanced4";
+import "./advanced5";
+import "./advanced6";
 let number = 1
 let numArr = [1, null] // tsconfig "strictNullChecks": false, false 则不校验null  true 则推断为number[] | null
 let funAdd = (x = 1) => x + 1
@@ -90,9 +95,9 @@ interface Point2D {
 let p3d = (point: Point3D) => { }
 let p2d = (point: Point2D) => { }
 // 函数参数的双向协变
-p3d = p2d
+p3d == p2d
 // "strictFunctionTypes": false,关闭配置才可以相等
-p2d = p3d
+p2d == p3d
 
 // 3.返回值类型
 let funR1 = () => ({ name: '张三' })
