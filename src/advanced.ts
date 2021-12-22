@@ -1,7 +1,7 @@
 /*
  * @Author: wch
  * @Date: 2021-11-23 17:18:34
- * @LastEditTime: 2021-12-21 17:12:23
+ * @LastEditTime: 2021-12-22 11:48:57
  * @LastEditors: your name
  * @Description: advanced 类型推断
  * @FilePath: \typeScript\src\advanced.ts
@@ -10,6 +10,8 @@
 import "./advanced2";
 import "./advanced3";
 import "./advanced4";
+import "./advanced5";
+import "./advanced6";
 let number = 1
 let numArr = [1, null] // tsconfig "strictNullChecks": false, false 则不校验null  true 则推断为number[] | null
 let funAdd = (x = 1) => x + 1

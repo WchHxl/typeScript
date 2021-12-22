@@ -32,5 +32,6 @@ let b_a4: Obj['a']
 function getValue_1<T, K extends keyof T>(obj: T, keys: K[]): T[K][]{
   return keys.map(key => obj[key])
 }
+console.log(getValue_1(obj_a4, ['a', 'b']));
 // 约束属性只能是对象中存在的
 // console.log(getValue_1(obj_a4, ['e', 'f']));
