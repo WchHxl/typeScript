@@ -1,10 +1,10 @@
 /*
  * @Author: wch
  * @Date: 2021-11-08 16:23:57
- * @LastEditTime: 2021-11-26 18:17:56
+ * @LastEditTime: 2021-12-23 17:25:32
  * @LastEditors: your name
  * @Description:  ts demo
- * @FilePath: \typeScript\src\index.ts
+ * @FilePath: \typeScript\src\demo\index.ts
  * 可以输入预定的版权声明、个性签名、空行等
  */
 import './dataType';
@@ -14,5 +14,15 @@ import './class1';
 import './class2';
 import './generics';
 import './advanced';
+import './merge';
 let hello: string = 'Hello typeScript'
 document.querySelectorAll('.app')[0].innerHTML = hello
+
+import $ from "jquery";
+$('.app').css('color', 'red')
+
+globalLib({
+  x: 1
+})
+console.log(globalLib);
+globalLib.doSomething()
