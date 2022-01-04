@@ -1,7 +1,7 @@
 /*
  * @Author: wch
  * @Date: 2021-11-08 16:23:57
- * @LastEditTime: 2021-12-23 17:25:32
+ * @LastEditTime: 2021-12-24 14:55:22
  * @LastEditors: your name
  * @Description:  ts demo
  * @FilePath: \typeScript\src\demo\index.ts
@@ -24,5 +24,5 @@ $('.app').css('color', 'red')
 globalLib({
   x: 1
 })
-console.log(globalLib);
-globalLib.doSomething()
+console.log(globalLib.doSomething());
+console.log(globalLib.version);
