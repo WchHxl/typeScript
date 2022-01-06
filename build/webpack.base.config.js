@@ -1,7 +1,7 @@
 /*******
  * @Author: wch
  * @Date: 2021-11-08 18:00:54
- * @LastEditTime: 2022-01-05 17:39:53
+ * @LastEditTime: 2022-01-06 11:36:47
  * @LastEditors: your name
  * @Description: 
  * @FilePath: \typeScript\build\webpack.base.config.js
@@ -9,7 +9,7 @@
  */
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const forkTsWebpackPlugin = require('fork-ts-checker-webpack-plugin')
-// const {
+// const { 
 //     CheckerPlugin
 // } = require("awesome-typescript-loader")
 module.exports = {
