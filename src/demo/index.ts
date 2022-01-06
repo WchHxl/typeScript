@@ -1,7 +1,7 @@
 /*
  * @Author: wch
  * @Date: 2021-11-08 16:23:57
- * @LastEditTime: 2021-12-24 14:55:22
+ * @LastEditTime: 2022-01-06 16:46:48
  * @LastEditors: your name
  * @Description:  ts demo
  * @FilePath: \typeScript\src\demo\index.ts
@@ -17,12 +17,3 @@ import './advanced';
 import './merge';
 let hello: string = 'Hello typeScript'
 document.querySelectorAll('.app')[0].innerHTML = hello
-
-import $ from "jquery";
-$('.app').css('color', 'red')
-
-globalLib({
-  x: 1
-})
-console.log(globalLib.doSomething());
-console.log(globalLib.version);

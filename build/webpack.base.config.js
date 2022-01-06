@@ -1,7 +1,7 @@
 /*******
  * @Author: wch
  * @Date: 2021-11-08 18:00:54
- * @LastEditTime: 2022-01-06 11:36:47
+ * @LastEditTime: 2022-01-06 16:47:19
  * @LastEditors: your name
  * @Description: 
  * @FilePath: \typeScript\build\webpack.base.config.js
@@ -14,7 +14,7 @@ const forkTsWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 // } = require("awesome-typescript-loader")
 module.exports = {
     entry: {
-        'app': './src/libs/index.ts'
+        'app': './src/demo/index.ts'
     },
     output: {
         filename: '[name].[chunkhash:8].js'
